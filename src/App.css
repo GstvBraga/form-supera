@@ -36,3 +36,63 @@
     transform: rotate(360deg);
   }
 }
+
+form
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset
+{
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 80%;
+  row-gap: 20px;
+  max-width: 800px;
+}
+
+.input-field
+{
+  position: relative;
+  height: 40px;
+}
+
+.input-field input
+{
+  position: absolute;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  width: 100%;
+  border-bottom: 2px solid rgb(197, 195, 195);
+}
+
+input:focus
+{
+  outline: none;
+  border-bottom: 2px solid green;
+}
+
+.input-field label
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #555;
+  pointer-events: none;
+  display: block;
+  transition: 0.5s;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label
+{
+  transform: translateY(-25px);
+}
