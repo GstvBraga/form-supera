@@ -37,12 +37,22 @@
   }
 }
 
+.content
+{
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+
 form
 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 90vh;
+  min-height: 600px;
   justify-content: center;
   align-items: center;
 }
@@ -53,14 +63,15 @@ fieldset
   flex-direction: column;
   border: none;
   width: 80%;
-  row-gap: 20px;
+  row-gap: 10px;
   max-width: 800px;
 }
 
 .input-field
 {
   position: relative;
-  height: 40px;
+  min-height: 45px;
+  margin-bottom: 15px;
 }
 
 .input-field input
@@ -95,4 +106,48 @@ input:focus
 .input-field input:not(:placeholder-shown) + label
 {
   transform: translateY(-25px);
+}
+
+.input-field > p
+{
+  color: rgb(255, 97, 97);
+  margin-top: 25px;
+}
+
+button
+{
+  cursor: pointer;
+}
+
+button[type="submit"]
+{
+  background-color: rgb(82, 255, 47);
+  width: 200px;
+  height: 1.6rem;
+  align-self: center;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.edit--btn
+{
+  background: none;
+  border: none;
+  font-weight:normal;
+}
+
+label[for=genero]{
+  top: -20px;
+}
+
+input[type="checkbox"]{
+  margin-top: 30px;
+  width: 100%;
+}
+
+label[for=checkbox]
+{
+  width: 100%;
+  padding-left: 10px;
 }
