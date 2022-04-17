@@ -1,6 +1,6 @@
 # Clonagem do repositório
 
-Clone o repositório do Github para uma pasta local
+Baixe e extraia o repositório do Github para uma pasta local
 
 ## Imagens de preview
 
