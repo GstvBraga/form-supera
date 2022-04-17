@@ -9,3 +9,8 @@ As imagens de preview estão disponiveis na pasta previews: mobile-form-preview.
 ## Inicialização do projeto
 
 Para inicializar o projeto tenha instalado o react e o node js, entre na pasta clonada apartir do terminal utilizando: cd "caminho da pasta form-supera" uma vez dentro da pasta digite o comando npm install para instalar os modulos necessários, em seguida digite npm start, o projeto será iniciado em uma instancia do localhost que aparecerá no terminal, abra seu navegador e copie o link
+
+## Previews
+
+![desktop form](https://i.ibb.co/DkBf5kT/desktop-form-preview.png)
+![mobile form](https://i.ibb.co/v4nXNXz/mobile-form-preview.png)
