@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
 
 export default function FormSupera() {
   
@@ -32,10 +34,37 @@ export default function FormSupera() {
       localStorage.setItem("formSupera", JSON.stringify(data));
   }
 
+  function editForm(){
+    const EditFormSwal = withReactContent(Swal)
+
+    EditFormSwal.fire({
+      title: 'Deseja editar o formulário?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Editar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setFormDisable(false)
+      }
+    })
+  }
+
+  function editButtonShow() 
+  {
+    let editButton;
+    if (formDisable = true){
+    editButton = <EditButton onClick={()=>editForm()}>editar</EditButton>
+  }else{
+    editButton = ''
+  }
+
+  
   return (
     <>
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h1>Formulário da Supera</h1>
+      <h1>Formulário Supera</h1>
       <fieldset disabled={formDisable}>
         <div className="input-field">
           <input
@@ -84,7 +113,8 @@ export default function FormSupera() {
         <button type="submit">Enviar</button>
       </fieldset>
     </form>
-    <button onClick={()=>setFormDisable(false)} type="button">editar</button>
+    {editButtonShow()}
     </>
-  )
+  );
 }
+
